@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../images/background.jpg) top center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Fira Sans', sans-serif;
+    color: #fff;
+    font-size: 11px;
+}
+
+.desktop{
+    //height: 910px;
+    position: relative;
+
+    &__pc{
+        position: fixed;
+        background-color: red;
+        width: 1000px;
+        height: 600px;
+        top: 20%;
+        left: 20%;
+        display: none;
+        text-align: center;
+        font-size: 30px;
+        z-index: 1000;
+
+        &._active{
+            display: block;
+        }
+    }
+
+    &__start{
+        position: fixed;
+        background-color: rgb(41, 41, 41);
+        width: 400px;
+        height: 600px;
+        bottom: 40px;
+        left: 0;
+        display: none;
+        text-align: center;
+        font-size: 30px;
+        z-index: 1000;
+
+        &._active{
+            display: block;
+        }
+    }
+    
+
+    &__icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &-icon{
+            width: 80px;
+            padding: 5px;
+            border: 1px solid rgba($color: #65c4d1, $alpha: 0.0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                max-width: 70px;
+            }
+
+            h2{
+                text-align: center;
+                font-weight: 400;
+                filter: drop-shadow(1px 2px 1px black);
+
+                &:hover{
+                    cursor: default;
+                }
+            }
+
+            &:hover{
+                background-color: rgba($color: #79ebfa, $alpha: 0.15);
+                border: 1px solid rgba($color: #65c4d1, $alpha: 0.5);
+            }
+
+            .recycle_bin{
+                max-width: 60px;
+            }
+        }
+    }
+}
+
+.footer{
+    height: 40px;
+    background-color: rgba($color: #17192c, $alpha: 0.7);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        &-icon{
+            display: flex;
+            justify-content: center;
+            width: 50px;
+            height: 100%;
+            padding: 5px;
+
+            &:hover{
+                background-color: rgba($color: #fff, $alpha: 0.15);
+            }
+        }
+
+        img{
+            max-width: 30px;
+        }
+
+        .user-icons{
+            border-bottom: 2px solid rgb(95, 171, 221);
+        }
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &-icon{
+            display: flex;
+            justify-content: center;
+            width: 30px;
+            height: 100%;
+
+            .arrow-image{
+                max-width: 15px;
+                margin: 13px;
+            }
+
+            .micro-image, .ethernet-image, .sound-image{
+                max-width: 22px;
+                margin: 9px;
+            }
+
+            &:hover{
+                background-color: rgba($color: #fff, $alpha: 0.15);
+            }
+        }
+
+        &-time{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            padding: 0px 5px;
+            max-width: 80px;
+            text-align: center;
+
+            p{
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            &:hover{
+                background-color: rgba($color: #fff, $alpha: 0.15);
+                cursor: default;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/background.jpg) top center;
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Fira Sans", sans-serif;
+  color: #fff;
+  font-size: 11px;
+}
+
+.desktop {
+  position: relative;
+}
+.desktop__pc {
+  position: fixed;
+  background-color: red;
+  width: 1000px;
+  height: 600px;
+  top: 20%;
+  left: 20%;
+  display: none;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+}
+.desktop__pc._active {
+  display: block;
+}
+.desktop__start {
+  position: fixed;
+  background-color: rgb(41, 41, 41);
+  width: 400px;
+  height: 600px;
+  bottom: 40px;
+  left: 0;
+  display: none;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+}
+.desktop__start._active {
+  display: block;
+}
+.desktop__icons {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.desktop__icons-icon {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid rgba(101, 196, 209, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.desktop__icons-icon img {
+  max-width: 70px;
+}
+.desktop__icons-icon h2 {
+  text-align: center;
+  font-weight: 400;
+  filter: drop-shadow(1px 2px 1px black);
+}
+.desktop__icons-icon h2:hover {
+  cursor: default;
+}
+.desktop__icons-icon:hover {
+  background-color: rgba(121, 235, 250, 0.15);
+  border: 1px solid rgba(101, 196, 209, 0.5);
+}
+.desktop__icons-icon .recycle_bin {
+  max-width: 60px;
+}
+
+.footer {
+  height: 40px;
+  background-color: rgba(23, 25, 44, 0.7);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__left {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.footer__left-icon {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  padding: 5px;
+}
+.footer__left-icon:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.footer__left img {
+  max-width: 30px;
+}
+.footer__left .user-icons {
+  border-bottom: 2px solid rgb(95, 171, 221);
+}
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer__right-icon {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 100%;
+}
+.footer__right-icon .arrow-image {
+  max-width: 15px;
+  margin: 13px;
+}
+.footer__right-icon .micro-image, .footer__right-icon .ethernet-image, .footer__right-icon .sound-image {
+  max-width: 22px;
+  margin: 9px;
+}
+.footer__right-icon:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.footer__right-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0px 5px;
+  max-width: 80px;
+  text-align: center;
+}
+.footer__right-time p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer__right-time:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: default;
+}/*# sourceMappingURL=main.css.map */

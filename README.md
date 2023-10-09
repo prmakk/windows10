@@ -1,0 +1,5 @@
+-------v1.0-------
+- Added base front-end (desktop, footer)
+- Added 4 apps (My PC, Recycle Bin, Google Chrome, Microsoft Edge)
+- Added logic for current time
+- Added popup windows when clicked "My PC", "Start Menu"

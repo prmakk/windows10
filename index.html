@@ -8,6 +8,32 @@
 </head>
 <body>
     <section class="desktop">
+        <div class="desktop__shutdown">
+            <img width="96" height="96" src="https://img.icons8.com/material-rounded/96/ffffff/spinner-frame-5.png" alt="spinner-frame-5" class="rot">
+            <p>Shutting down</p>
+
+        </div>
+
+        <div class="pcTurnedOff">
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/turn-on.png" alt="turn-on" class="turnOnPc">
+            <p>Turn On me!</p>
+        </div>
+
+        <div class="pcLoadMotherboard">
+            <img src="images/motherboard.jpg" alt="asus motherboard load screen">
+        </div>
+
+        <div class="pcLoadHome">
+            <div class="info">
+                <img src="images/user.png" alt="windows user" height="200" width="200">
+                <p>User</p>
+                <div class="info__welcome">
+                    <img width="55" height="55" src="https://img.icons8.com/material-rounded/96/ffffff/spinner-frame-5.png" alt="spinner-frame-5" class="rot">
+                    <span>Welcome...</span>
+                </div>
+            </div>
+        </div>
+
         <div class="desktop__pc">
             <div class="desktop__pc-header">
                 <div class="top">
@@ -128,7 +154,7 @@
                 <div class="disks">
                     <div class="disks__title">
                         <img width="15" height="15" src="https://img.icons8.com/ios-glyphs/30/a6a6a6/expand-arrow--v1.png" alt="expand-arrow--v1" class="dropdownDisks">
-                        <p>Devices and disks (3)</p>
+                        <p>Devices and disks (2)</p>
                         <hr>
                     </div>
 
@@ -161,6 +187,83 @@
             </div>
         </div>
 
+        <div class="desktop__chrome">
+            <header class="header">
+                <div class="icon minimizeChrome">
+                    <img width="15" height="15" src="https://img.icons8.com/material-sharp/24/ffffff/horizontal-line.png" alt="horizontal-line">
+                </div>
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-rounded/24/ffffff/square-spinner.png" alt="square-spinner"/>
+                </div>
+                <div class="icon closeChrome">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1" class="close">
+                </div>
+            </header>
+
+            <iframe id="if1" width="100%" height="100%" style="visibility:visible" src="https://www.google.com/search?igu=1" class="chromeIframe"></iframe>
+        </div>
+
+        <div class="desktop__calc">
+            <div class="desktop__calc-header">
+                <div class="left">
+                    <img width="17" height="17" src="https://img.icons8.com/fluency/96/calculator.png" alt="calculator">
+                    <p>Calculator</p>
+                </div>
+
+                <div class="right">
+                    <div class="icon minimizeCalculatorApp">
+                        <img width="15" height="15" src="https://img.icons8.com/material-sharp/24/horizontal-line.png" alt="horizontal-line">
+                    </div>
+                    <div class="icon">
+                        <img width="15" height="15" src="https://img.icons8.com/material-rounded/24/square-spinner.png" alt="square-spinner"/>
+                    </div>
+                    <div class="icon closeCalculatorApp">
+                        <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/delete-sign--v1.png" alt="delete-sign--v1" class="hover-default">
+                        <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1" class="hover-close">
+                    </div>
+                </div>
+            </div>
+
+            <div class="desktop__calc-result">
+                <input type="text" class="calculationResult" name="result">
+            </div>
+
+            <div class="desktop__calc-btns">
+                <div class="row">
+                    <input type="button" value="/" class="divide">
+                    <input type="button" value="CE" class="clearAll">
+                    <input type="button" value="⬅" class="backspace">
+                </div>
+
+                <div class="row">
+                    <input type="button" value="7" class="seven">
+                    <input type="button" value="8" class="eight">
+                    <input type="button" value="9" class="nine">
+                    <input type="button" value="*" class="multiply">
+                </div>
+
+                <div class="row">
+                    <input type="button" value="4" class="four">
+                    <input type="button" value="5" class="five">
+                    <input type="button" value="6" class="six">
+                    <input type="button" value="-" class="minus">
+                </div>
+
+                <div class="row">
+                    <input type="button" value="1" class="one">
+                    <input type="button" value="2" class="two">
+                    <input type="button" value="3" class="three">
+                    <input type="button" value="+" class="add">
+                </div>
+
+                <div class="row">
+                    <input type="button" value="0" class="zero">
+                    <input type="button" value="," class="separator">
+                    <input type="button" value="=" class="equal">
+                </div>
+            </div>
+        </div>
+
         <div class="desktop__start">
             <div class="wrapper">
                 <aside>
@@ -177,7 +280,7 @@
                         <div class="sidebar__icon">
                             <img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/settings--v1.png" alt="settings--v1"/>
                         </div>
-                        <div class="sidebar__icon shutdownBtn">
+                        <div class="sidebar__icon turnoffBtn">
                             <img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/shutdown.png" alt="shutdown">
                         </div>
                     </div>
@@ -187,7 +290,7 @@
                             <img width="23" height="23" src="https://img.icons8.com/ios/50/ffffff/moon-symbol.png" alt="moon-symbol"/>
                             <p>Sleep</p>
                         </div>
-                        <div class="sidebar__turnon-item">
+                        <div class="sidebar__turnon-item shutdownBtn">
                             <img width="23" height="23" src="https://img.icons8.com/windows/32/ffffff/shutdown.png" alt="shutdown"/>
                             <p>Shutdown</p>
                         </div>
@@ -255,7 +358,7 @@
                             <img width="60" height="60" src="https://img.icons8.com/color/96/microsoft-to-do-app.png" alt="microsoft-to-do-app"/>
                             <p>To Do</p>
                         </div>
-                        <div class="cards__card">
+                        <div class="cards__card calculatorApp">
                             <img width="60" height="60" src="https://img.icons8.com/fluency/96/calculator.png" alt="calculator"/>
                             <p>Calculator</p>
                         </div>
@@ -263,7 +366,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="desktop__icons">
             <div class="desktop__icons-icon desktop-pc">
@@ -274,7 +376,7 @@
                 <img src="images/recycle_bin.png" alt="PC recycle bin icon" class="recycle_bin">
                 <h2>Recycle Bin</h2>
             </div>
-            <div class="desktop__icons-icon">
+            <div class="desktop__icons-icon desktop-chrome">
                 <img src="images/chrome.png" alt="Google Chrome image" >
                 <h2>Chrome</h2>
             </div>
@@ -299,6 +401,13 @@
             <div class="footer__left-icon">
                 <img src="images/discord.png" alt="Discord Image" class="user-icons">
             </div>
+            <div class="footer__left-icon chromeFooterIcon">
+                <img src="images/chrome-tray.png" alt="Chrome Image" class="user-icons">
+            </div>
+            <div class="footer__left-icon calcFooterIcon">
+                <img src="https://img.icons8.com/fluency/96/calculator.png" alt="calculator" class="user-icons">
+            </div>
+            
         </div>
 
         <div class="footer__right">
@@ -346,5 +455,6 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/calculatorApp.js"></script>
 </body>
 </html>

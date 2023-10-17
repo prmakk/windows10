@@ -13,3 +13,12 @@
 - My PC Explorer has dropdown menu for disks
 - You can open My PC Explorer from tray now and minimize it
 - Added animation for turn OFF menu
+
+-------v1.2-------
+- Added Chrome browser
+- Added calculatop app
+- Added shutdown option
+- Addead ability to turn on the PC
+- Fixed various bugs
+- Added chrome icon to the tray if browser is open
+

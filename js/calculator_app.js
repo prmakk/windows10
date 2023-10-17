@@ -24,7 +24,8 @@ const zeroNum = document.querySelector('.zero');
 
 equal.onclick = () =>{
     let result = eval(calculationResult.value);
-    calculationResult.value = result.toFixed(3);
+    if(Number.isInteger(result)) calculationResult.value = result;
+    else calculationResult.value = result.toFixed(3);
 }
 
 clearAll.onclick = () =>{

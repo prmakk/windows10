@@ -60,6 +60,14 @@ const calcFooterIcon = document.querySelector('.calcFooterIcon');
 const minimizeCalculatorAppBtn = document.querySelector('.minimizeCalculatorApp');
 
 
+//SNAKE GAME
+const snakeGameBtn = document.querySelector('.desktop-snake');
+const gameMenu = document.querySelector('.gameMenu');
+const snakeGameWindow = document.querySelector('.desktop__snakeGame');
+const snakeFooterIcon = document.querySelector('.snakeFooterIcon');
+const closeSnakeGameBtn = document.querySelector('.closeSnakeGame');
+
+
 function currentTime(){
     let time = new Date();
     return time.toLocaleString();
@@ -193,3 +201,17 @@ minimizeCalculatorAppBtn.onclick = () =>{
     calculatorApp.classList.remove('_active');
 }
 
+
+//SNAKE GAME
+snakeGameBtn.onclick = () =>{
+    snakeGameWindow.classList.add('_active');
+    snakeFooterIcon.style = 'display: flex';
+    gameMenu.style = 'display: flex';
+    gameBoard.style = 'display: none';
+    gameInfo.style = 'display: none';
+}
+
+closeSnakeGameBtn.onclick = () =>{
+    snakeGameWindow.classList.remove('_active');
+    snakeFooterIcon.style = 'display: none';
+}

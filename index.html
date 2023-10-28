@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="images/mypc.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <title>Windows 10 Desktop</title>
 </head>
@@ -264,6 +265,44 @@
             </div>
         </div>
 
+        <div class="desktop__snakeGame" tabindex="0">
+            <header class="header">
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-sharp/24/ffffff/horizontal-line.png" alt="horizontal-line">
+                </div>
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-rounded/24/ffffff/square-spinner.png" alt="square-spinner"/>
+                </div>
+                <div class="icon closeSnakeGame">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1" class="close">
+                </div>
+            </header>
+
+            <div class="gameMenu">
+                <h1>Snake Game</h1>
+                <div class="gameMenu__modes">
+                    <p class="modeEasy">Easy</p>
+                    <p class="modeMedium">Medium</p>
+                    <p class="modeHard">Hard</p>
+                    <p class="modeUnreal">Unreal</p>
+                </div>
+            </div>
+
+            <div class="gameInfo">
+                <p class="score">Score: 0</p>
+                <p class="mode">Mode: none</p>
+            </div>
+
+            <div class="gameBoard">
+
+            </div>
+
+            <div class="gameLose">
+                <h1>You lose!</h1>
+                <p>Page reload in 2 seconds...</p>
+            </div>
+        </div>
+
         <div class="desktop__start">
             <div class="wrapper">
                 <aside>
@@ -384,6 +423,10 @@
                 <img src="images/edge.png" alt="Microsoft Edge image" >
                 <h2>Edge</h2>
             </div>
+            <div class="desktop__icons-icon desktop-snake">
+                <img src="images/snake.png" alt="Snake Game Logo" >
+                <h2>Snake Game</h2>
+            </div>
         </div>
     </section>
 
@@ -407,7 +450,9 @@
             <div class="footer__left-icon calcFooterIcon">
                 <img src="https://img.icons8.com/fluency/96/calculator.png" alt="calculator" class="user-icons">
             </div>
-            
+            <div class="footer__left-icon snakeFooterIcon">
+                <img src="images/snake.png" alt="Snake Image" class="user-icons">
+            </div>
         </div>
 
         <div class="footer__right">
@@ -456,5 +501,6 @@
 
     <script src="js/script.js"></script>
     <script src="js/calculator_app.js"></script>
+    <script src="js/snake.js"></script>
 </body>
 </html>

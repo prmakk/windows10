@@ -21,6 +21,10 @@
 - Addead ability to turn on the PC
 - Fixed various bugs
 - Added chrome icon to the tray if browser is open
-(---v1.2.1---)
+
+---v1.2.1---
 - Fixed results in calculator for Integers
 
+-------v1.3-------
+- Added Snake Game
+- Added favicon

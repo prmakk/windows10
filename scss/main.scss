@@ -641,6 +641,15 @@ body{
         left: 70%;
         display: none;
 
+        .box{
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+
         &._active{
             display: block;
         }
@@ -752,6 +761,172 @@ body{
         }
     }
 
+    &__snakeGame{
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-color: #f3f3f3;
+        top: 30%;
+        left: 30%;
+        display: none;
+
+        &._active{
+            display: block;
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            background-color: #B8C6DC;
+
+            .icon{
+                padding: 0px 10px;
+                display: flex;
+                align-items: center;
+                padding: 8px 15px;
+
+                &:hover{
+                    background-color: #dbdbdb;
+                }
+
+                &:nth-child(3):hover{
+                    background-color: red;
+
+                    .hover-close{
+                        display: flex;
+                    }
+
+                    .hover-default{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .gameMenu{
+            width: 100%;
+            height: 100%;
+            background-color: #293447;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: none;
+
+            &__modes{
+                padding: 15px 70px;
+                border-radius: 30px;
+                text-align: center;
+                border: 3px solid #435675;
+
+                :nth-child(1){
+                    color: rgb(0, 168, 0);
+                    transition: .4s all ease;
+
+                    &:hover{
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid rgb(0, 168, 0);
+                    }
+                }
+                :nth-child(2){
+                    color: rgb(219, 158, 25);
+                    transition: .4s all ease;
+
+                    &:hover{
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid rgb(219, 158, 25);
+                    }
+                }
+                :nth-child(3){
+                    color: rgb(201, 73, 34);
+                    transition: .4s all ease;
+
+                    &:hover{
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid rgb(201, 73, 34);
+                    }
+                }
+                :nth-child(4){
+                    color: rgb(185, 0, 0);
+                    transition: .4s all ease;
+
+                    &:hover{
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid rgb(185, 0, 0);
+                    }
+                }
+            }
+            h1{
+                font-size: 48px;
+                margin-bottom: 200px;
+            }
+
+            p{
+                font-size: 22px;
+                margin-bottom: 10px;
+                font-weight: 500;
+                border-bottom: 1px solid transparent;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .gameInfo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #293447;
+            p{
+                color: #B8C6DC;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+        }
+
+        .gameBoard{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            background: #212837;
+            grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+
+            .food{
+                background-color: red;
+                border-radius: 50%;
+            }
+
+            .player{
+                background-color: green;
+                border-radius: 50%;
+            }
+        }
+
+        .gameLose{
+            width: 100%;
+            height: 100%;
+            background-color: #293447;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: none;
+            
+            h1{
+                font-size: 52px;
+                color: red;
+            }
+            p{
+                margin-top: 30px;
+                font-size: 22px;
+            }
+        }
+    }
+
     &__icons{
         padding: 10px;
         display: flex;
@@ -828,7 +1003,7 @@ body{
             border-bottom: 2px solid rgb(95, 171, 221);
         }
 
-        .chromeFooterIcon, .calcFooterIcon{
+        .chromeFooterIcon, .calcFooterIcon, .snakeFooterIcon{
             display: none;
         }
     }

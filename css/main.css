@@ -533,6 +533,14 @@ body {
   left: 70%;
   display: none;
 }
+.desktop__calc .box {
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
 .desktop__calc._active {
   display: block;
 }
@@ -621,6 +629,149 @@ body {
 .desktop__calc-btns .row .equal:hover {
   background-color: #196aa7;
 }
+.desktop__snakeGame {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: #f3f3f3;
+  top: 30%;
+  left: 30%;
+  display: none;
+}
+.desktop__snakeGame._active {
+  display: block;
+}
+.desktop__snakeGame .header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #B8C6DC;
+}
+.desktop__snakeGame .header .icon {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+.desktop__snakeGame .header .icon:hover {
+  background-color: #dbdbdb;
+}
+.desktop__snakeGame .header .icon:nth-child(3):hover {
+  background-color: red;
+}
+.desktop__snakeGame .header .icon:nth-child(3):hover .hover-close {
+  display: flex;
+}
+.desktop__snakeGame .header .icon:nth-child(3):hover .hover-default {
+  display: none;
+}
+.desktop__snakeGame .gameMenu {
+  width: 100%;
+  height: 100%;
+  background-color: #293447;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.desktop__snakeGame .gameMenu__modes {
+  padding: 15px 70px;
+  border-radius: 30px;
+  text-align: center;
+  border: 3px solid #435675;
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(1) {
+  color: rgb(0, 168, 0);
+  transition: 0.4s all ease;
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(1):hover {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(0, 168, 0);
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(2) {
+  color: rgb(219, 158, 25);
+  transition: 0.4s all ease;
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(2):hover {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(219, 158, 25);
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(3) {
+  color: rgb(201, 73, 34);
+  transition: 0.4s all ease;
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(3):hover {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(201, 73, 34);
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(4) {
+  color: rgb(185, 0, 0);
+  transition: 0.4s all ease;
+}
+.desktop__snakeGame .gameMenu__modes :nth-child(4):hover {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(185, 0, 0);
+}
+.desktop__snakeGame .gameMenu h1 {
+  font-size: 48px;
+  margin-bottom: 200px;
+}
+.desktop__snakeGame .gameMenu p {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+.desktop__snakeGame .gameMenu p:hover {
+  cursor: pointer;
+}
+.desktop__snakeGame .gameInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #293447;
+}
+.desktop__snakeGame .gameInfo p {
+  color: #B8C6DC;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.desktop__snakeGame .gameBoard {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #212837;
+  grid-template: repeat(30, 1fr)/repeat(30, 1fr);
+}
+.desktop__snakeGame .gameBoard .food {
+  background-color: red;
+  border-radius: 50%;
+}
+.desktop__snakeGame .gameBoard .player {
+  background-color: green;
+  border-radius: 50%;
+}
+.desktop__snakeGame .gameLose {
+  width: 100%;
+  height: 100%;
+  background-color: #293447;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.desktop__snakeGame .gameLose h1 {
+  font-size: 52px;
+  color: red;
+}
+.desktop__snakeGame .gameLose p {
+  margin-top: 30px;
+  font-size: 22px;
+}
 .desktop__icons {
   padding: 10px;
   display: flex;
@@ -685,7 +836,7 @@ body {
 .footer__left .user-icons {
   border-bottom: 2px solid rgb(95, 171, 221);
 }
-.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon {
+.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon, .footer__left .snakeFooterIcon {
   display: none;
 }
 .footer__right {

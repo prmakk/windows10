@@ -69,6 +69,17 @@ const snakeFooterIcon = document.querySelector('.snakeFooterIcon');
 const closeSnakeGameBtn = document.querySelector('.closeSnakeGame');
 
 
+//TELEGRAM VARIABLES
+const telegramFooterIcon = document.querySelector('.telegramFooterIcon');
+const telegramDesktopBtn = document.querySelector('.desktop-telegram');
+const closeTelegramBtn = document.querySelector('.closeTelegram');
+const telegramWindow = document.querySelector('.desktop__telegram');
+const telegramBurgerBtn = document.querySelector('.telegram-burger');
+const telegramSidebar = document.querySelector('.desktop__telegram-sidemenu');
+const telegramChannels = document.querySelector('.desktop__telegram-channels');
+const telegramChannelHeader = document.querySelector('.top__rightTg');
+
+
 function currentTime(){
     let time = new Date();
     return time.toLocaleString();
@@ -215,4 +226,28 @@ snakeGameBtn.onclick = () =>{
 closeSnakeGameBtn.onclick = () =>{
     snakeGameWindow.classList.remove('_active');
     snakeFooterIcon.style = 'display: none';
+}
+
+
+//TELEGRAM
+
+telegramDesktopBtn.onclick = () =>{
+    telegramWindow.style = 'display: block';
+    telegramFooterIcon.style = 'display: flex';
+}
+
+telegramBurgerBtn.onclick = () =>{
+    telegramSidebar.classList.add('_active');
+}
+
+telegramSidebar.onclick = () =>{
+    telegramSidebar.classList.remove('_active');
+}
+
+closeTelegramBtn.onclick = () =>{
+    telegramWindow.style = 'display: none';
+    telegramSidebar.classList.remove('_active');
+    telegramFooterIcon.style = 'display: none';
+    channelMsgs.style = 'display: none';
+    telegramChannelHeader.style = 'display: none';
 }

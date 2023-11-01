@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+*, a:focus {
+    outline: none !important;
+}
 
 body{
     background: url(../images/background.jpg) top center;
@@ -927,6 +930,344 @@ body{
         }
     }
 
+    &__telegram{
+        position: absolute;
+        width: 1200px;
+        height: 800px;
+        background-color: #f3f3f3;
+        top: 10%;
+        left: 20%;
+        display: none;
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            background-color: #f1f1f1;
+
+            .icon{
+                padding: 0px 10px;
+                display: flex;
+                align-items: center;
+                padding: 8px 15px;
+
+                .hover-close{
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: #e5e5e5;
+                }
+
+                &:nth-child(3):hover{
+                    background-color: #e81123;
+
+                    .hover-close{
+                        display: flex;
+                    }
+
+                    .close{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-sidemenu{
+            display: flex;
+            transform: translate(0%, 0%);
+            z-index: 9999;
+            transition: .17s all ease-out;
+            position: absolute;
+            scale: 0;
+            opacity: 0;
+
+            &._active{
+                scale: 1;
+                opacity: 1;
+                transform: translate(0, 0);
+                top: 4%;
+                left: 0%;
+            }
+
+            .left{
+                padding: 22px 0px 0px 0px;
+                width: 350px;
+                color: #222222;
+                background-color: #fff;
+    
+                .top{
+                    border-bottom: 1px solid #d3d3d3;
+    
+                    .avatarImg{
+                        margin-left: 22px;
+                        width: 60px;
+                    }
+        
+                    .nickname{
+                        padding-left: 22px;
+                        margin-top: 20px;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+        
+                    .status{
+                        padding-left: 22px;
+                        margin-top: 5px;
+                        margin-bottom: 15px;
+                        font-size: 18px;
+                        color: #168acd;
+                        font-weight: 400;
+                    }
+                }
+    
+                .main{
+                    padding-top: 5px;
+    
+                    .item{
+                        padding: 12px 22px;
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+    
+                        p{
+                            font-size: 18px;
+                            font-weight: 500;
+    
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+    
+                        &:hover{
+                            background-color: #f1f1f1;
+                            cursor: pointer;
+                        }
+                    }
+                }
+    
+                .bot{
+                    margin-top: 155px;
+                    padding: 22px;
+    
+                    h2{
+                        color: #999999;
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+    
+                    &__about{
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+    
+                        a{
+                            text-decoration: none;
+    
+                            &:hover{
+                                text-decoration: underline;
+                                text-decoration-color: #999;
+                            }
+                        }
+    
+                        p{
+                            font-size: 18px;
+                            color: #999;
+                            font-weight: 300;
+    
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .right{
+                width: 850px;
+                height: 768px;
+                background-color: #000;
+                opacity: .5;
+            }
+        }
+
+        &-channels{
+            color: #222222;
+            background-color: #fff;
+            height: 769px;
+
+            .top{
+                display: flex;
+                align-items: center;
+
+                &__left{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 20px 5px 20px 20px;
+                    border-right: 1px solid #e5e5e5;
+    
+                    input{
+                        padding-left: 20px;
+                        font-size: 18px;
+                        height: 45px;
+                        width: 420px;
+                        border-radius: 30px;
+                        border: none;
+                        border: 2px solid #e5e5e5;
+    
+                        &::placeholder{
+                            opacity: .6;
+                        }
+                    }
+    
+                    img:hover{
+                        cursor: pointer;
+                    }
+                }
+
+                &__rightTg{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .channel-info{
+                        margin-left: 25px;
+
+                        .channel-name-header{
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+
+                        .statusChannel{
+                            margin-top: 5px;
+                            color: #999;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .icons{
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+                        margin-right: 25px;
+                        display: none;
+                    }
+                }
+            }
+
+            .main{
+                display: flex;
+                flex-direction: row;
+
+                &__channels{
+                    max-width: 500px;
+                    border-right: 1px solid #e5e5e5;
+
+                    .channel{
+                        display: flex;
+                        align-items: center;
+                        padding-left: 10px;
+    
+                        img{
+                            max-width: 60px;
+                            border-radius: 50%;
+                        }
+    
+                        .info{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 15px 10px;
+    
+                            .top-info{
+                                width: 400px;
+                                display: flex;
+                                justify-content: space-between;
+    
+                                .time{
+                                    color: #999;
+                                    font-size: 14px;
+                                }
+                            }
+    
+                            .channel-name{
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
+    
+                            .channel-post{
+                                color: #999999;
+                                padding-top: 5px;
+                                font-size: 16px;
+                                font-weight: 400;
+    
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+    
+                        &:hover{
+                            background-color: #f1f1f1;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &__info{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    background: url(../images/telegram_bg.jpg) top center;
+                    background-size: cover;
+                    width: 100%;
+                    height: 684px;
+                    padding: 20px;
+                    overflow-y: scroll;
+                    display: none;
+
+                    .message{
+                        border-radius: 10px 10px 10px 0px;
+                        padding: 5px 10px;
+                        max-width: 500px;
+                        background-color: #fff;
+
+                        .channelName{
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            font-weight: 500;
+                        }
+
+                        .channel-msg{
+                            max-width: 500px;
+                            font-size: 16px;
+                        }
+
+                        &__footer{
+                            display: flex;
+                            align-items: center;
+                            justify-content: right;
+                            gap: 10px;
+
+                            .time, .views{
+                                color: #a0acb6;
+                                font-size: 14px;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            &._hidden{
+                background-color: #000;
+                opacity: .3;
+            }
+        }
+    }
+
     &__icons{
         padding: 10px;
         display: flex;
@@ -1003,7 +1344,7 @@ body{
             border-bottom: 2px solid rgb(95, 171, 221);
         }
 
-        .chromeFooterIcon, .calcFooterIcon, .snakeFooterIcon{
+        .chromeFooterIcon, .calcFooterIcon, .snakeFooterIcon, .telegramFooterIcon{
             display: none;
         }
     }

@@ -1,8 +1,8 @@
 'use strict';
 
 const gameBoard = document.querySelector('.gameBoard');
-let foodX = 13;
-let foodY = 10;
+let foodX = 13,
+    foodY = 10;
 let playerX = 5;
 let playerY = 5;
 let velocityX = 0;
@@ -17,7 +17,6 @@ const modeMediumBtn = document.querySelector('.modeMedium');
 const modeHardBtn = document.querySelector('.modeHard');
 const modeUnrealBtn = document.querySelector('.modeUnreal');
 const gameLoseWindow = document.querySelector('.gameLose');
-const gameInfo = document.querySelector('.gameInfo');
 
 const generateNewFood = () =>{
     foodX = Math.floor(Math.random() * 30) + 1;

@@ -28,3 +28,6 @@
 -------v1.3-------
 - Added Snake Game
 - Added favicon
+
+-------v1.4-------
+- Added Telegram App v1.0 (Side menu, animations, random message generator in the channel)

@@ -1391,6 +1391,131 @@ body{
         }
     }
 
+    &__weather{
+        position: absolute;
+        background-color: #fff;
+        top: 20%;
+        left: 30%;
+        color: #000;
+        scale: 0;
+        transition: .3s all ease;
+        opacity: 0;
+
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            background-color: #f1f1f1;
+
+            .icon{
+                padding: 0px 10px;
+                display: flex;
+                align-items: center;
+                padding: 8px 15px;
+
+                .hover-close{
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: #e5e5e5;
+                }
+
+                &:nth-child(3):hover{
+                    background-color: #e81123;
+
+                    .hover-close{
+                        display: flex;
+                    }
+
+                    .close{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-main{
+            padding: 15px;
+
+            .input{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input{
+                    border: 2px solid #e5e5e5;
+                    border-radius: 30px;
+                    padding: 15px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+                
+                button{
+                    border-radius: 50%;
+                    padding: 5px;
+                    background-color: transparent;
+                    border: 2px solid #999;
+                    transition: .2s all ease;
+
+                    &:hover{
+                        cursor: pointer;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        
+            .info{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 30px;
+
+                img{
+                    max-width: 100px;
+                }
+
+                .degrees{
+                    font-size: 42px;
+                }
+
+                .weather-info{
+                    margin-top: 20px;
+                    font-size: 35px;
+                    opacity: 0.7;
+                    text-transform: uppercase;
+                    max-width: 200px;
+                    text-align: center;
+                }
+
+                &__footer{
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 130px;
+                    font-size: 20px;
+
+                    .humidity, .wind{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &._active{
+            opacity: 1;
+            top: 10%;
+            left: 35%;
+            scale: 1;
+        }
+    }
+
     &__icons{
         padding: 10px;
         display: flex;
@@ -1471,7 +1596,7 @@ body{
             border-bottom: 2px solid rgb(95, 171, 221);
         }
 
-        .chromeFooterIcon, .calcFooterIcon, .snakeFooterIcon, .telegramFooterIcon, .windowsSettingsFooterIcon{
+        .chromeFooterIcon, .calcFooterIcon, .snakeFooterIcon, .telegramFooterIcon, .windowsSettingsFooterIcon, .weatherFooterIcon{
             display: none;
         }
     }

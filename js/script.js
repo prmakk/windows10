@@ -91,6 +91,22 @@ const windowsxpBgBtn = document.getElementById('bg2');
 const minecraftBgBtn = document.getElementById('bg3');
 
 
+//WEATHER VARIABLES
+const weatherAppWindow = document.querySelector('.desktop__weather');
+const startMenuWeatherBtn = document.querySelector('.weatherApp');
+const closeWeatherBtn = document.querySelector('.closeWeatherBtn');
+const getWeatherBtn = document.querySelector('.getWeather');
+const inputCity = document.querySelector('.inputCityField');
+const weatherInfo = document.querySelector('.weatherInfo');
+const weatherInfoText = document.querySelector('.weather-info');
+const currentDegrees = document.querySelector('.degrees');
+const currentHumidity = document.querySelector('.humidityText');
+const currentWind = document.querySelector('.windText');
+const humidityImg = document.querySelector('.humidityImg');
+const windImg = document.querySelector('.windImg');
+const currentWeatherImg = document.querySelector('.currentWeather');
+const weatherFooterIcon = document.querySelector('.weatherFooterIcon');
+
 window.onload = () =>{
     let currentBg = localStorage.getItem("currentBg");
     document.body.style.background = currentBg;
@@ -298,4 +314,72 @@ minecraftBgBtn.onclick = () =>{
     let bgUrl = `url(./images/minecraft_bg.jpg) top center`;
     document.body.style.background = bgUrl;
     localStorage.setItem("currentBg", bgUrl);
+}
+
+
+
+//WEATHER
+
+function clearWeather(){
+    currentDegrees.innerHTML = '';
+    currentHumidity.innerHTML = '';
+    currentWind.innerHTML = '';
+    windImg.style = 'display: none';
+    humidityImg.style = 'display: none';
+    inputCity.value = "";
+}
+
+startMenuWeatherBtn.onclick = () =>{
+    weatherAppWindow.classList.add('_active');
+    startMenu.classList.remove('_active');
+    weatherFooterIcon.style = 'display: flex';
+}
+
+closeWeatherBtn.onclick = () =>{
+    weatherAppWindow.classList.remove('_active');
+    weatherFooterIcon.style = 'display: none';
+    setTimeout( () =>{
+        currentWeatherImg.setAttribute('src', 'images/weatherNone.png');
+        weatherInfoText.innerHTML = 'Enter city';
+        clearWeather();
+    }, 550);
+    
+}
+
+getWeatherBtn.onclick = () =>{
+    const API = '96933ff17bc7a2f318788d22dea4aec3';
+    let desiredCity = inputCity.value;
+
+    if(inputCity.value === ''){
+        return (weatherInfoText.innerHTML = 'Input field was empty',
+                currentWeatherImg.setAttribute('src', 'images/weatherNone.png'),
+                clearWeather());
+    }
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${desiredCity}&appid=${API}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.cod === '404'){
+                weatherInfoText.innerHTML = 'Location not found';
+                currentWeatherImg.setAttribute('src', 'images/weatherNone.png'),
+                clearWeather();
+            }
+            else{
+                windImg.style = 'display: block';
+                humidityImg.style = 'display: block';
+                console.log(data.weather[0].main);
+                switch(data.weather[0].main){
+                    case 'Clear': currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/01d@2x.png'); break;
+                    case 'Clouds' : currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/02d@2x.png'); break;
+                    case 'Rain' : currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/10d@2x.png'); break;
+                    case 'Thunderstorm' : currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/11d@2x.png'); break;
+                    case 'Snow' : currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/13d@2x.png'); break;
+                    case 'Atmosphere' : currentWeatherImg.setAttribute('src', 'https://openweathermap.org/img/wn/50d@2x.png'); break;
+                }
+                weatherInfoText.innerHTML = data.weather[0].description;
+                currentDegrees.innerHTML = Math.round(data.main.temp - 273) + `°`;
+                currentHumidity.innerHTML = data.main.humidity + "%";
+                currentWind.innerHTML = Math.round(data.wind.speed) + "km/h";
+            }
+        });
 }

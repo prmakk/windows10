@@ -283,19 +283,19 @@ windowsSettingsCloseBtn.onclick = () =>{
 }
 
 windowsBgBtn.onclick = () =>{
-    let bgUrl = 'url(../images/background.jpg) top center';
+    let bgUrl = `url(./images/background.jpg) top center`;
     document.body.style.background = bgUrl;
     localStorage.setItem("currentBg", bgUrl);
 }
 
 windowsxpBgBtn.onclick = () =>{
-    let bgUrl = 'url(../images/windowsxp_bg.jpg) top center';
+    let bgUrl = `url(./images/windowsxp_bg.jpg) top center`;
     document.body.style.background = bgUrl;
     localStorage.setItem("currentBg", bgUrl);
 }
 
 minecraftBgBtn.onclick = () =>{
-    let bgUrl = 'url(../images/minecraft_bg.jpg) top center';
+    let bgUrl = `url(./images/minecraft_bg.jpg) top center`;
     document.body.style.background = bgUrl;
     localStorage.setItem("currentBg", bgUrl);
 }

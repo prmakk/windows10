@@ -34,3 +34,7 @@
 
 -------v1.5-------
 - Added settings menu where you can change the desktop background
+
+-------v1.6-------
+- Added weather App in start menu (data from OpenWeatherApp)
+- Fixed bug with desktop image

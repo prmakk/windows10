@@ -80,6 +80,22 @@ const telegramChannels = document.querySelector('.desktop__telegram-channels');
 const telegramChannelHeader = document.querySelector('.top__rightTg');
 
 
+//START SETTINGS VARIABLES
+const windowsSettingsWindow = document.querySelector('.desktop__settings');
+const startMenuSettingsBtn = document.querySelector('.startMenuSettingsBtn');
+const windowsSettingsCloseBtn = document.querySelector('.closeSettings');
+const windowsSettingsFooterIcon = document.querySelector('.windowsSettingsFooterIcon');
+
+const windowsBgBtn = document.getElementById('bg1');
+const windowsxpBgBtn = document.getElementById('bg2');
+const minecraftBgBtn = document.getElementById('bg3');
+
+
+window.onload = () =>{
+    let currentBg = localStorage.getItem("currentBg");
+    document.body.style.background = currentBg;
+}
+
 function currentTime(){
     let time = new Date();
     return time.toLocaleString();
@@ -250,4 +266,36 @@ closeTelegramBtn.onclick = () =>{
     telegramFooterIcon.style = 'display: none';
     channelMsgs.style = 'display: none';
     telegramChannelHeader.style = 'display: none';
+}
+
+
+//WINDOWS SETTINGS
+
+startMenuSettingsBtn.onclick = () =>{
+    windowsSettingsWindow.classList.toggle('_active');
+    startMenu.classList.remove('_active');
+    windowsSettingsFooterIcon.style = 'display: flex';
+}
+
+windowsSettingsCloseBtn.onclick = () =>{
+    windowsSettingsWindow.classList.toggle('_active');
+    windowsSettingsFooterIcon.style = 'display: none';
+}
+
+windowsBgBtn.onclick = () =>{
+    let bgUrl = 'url(../images/background.jpg) top center';
+    document.body.style.background = bgUrl;
+    localStorage.setItem("currentBg", bgUrl);
+}
+
+windowsxpBgBtn.onclick = () =>{
+    let bgUrl = 'url(../images/windowsxp_bg.jpg) top center';
+    document.body.style.background = bgUrl;
+    localStorage.setItem("currentBg", bgUrl);
+}
+
+minecraftBgBtn.onclick = () =>{
+    let bgUrl = 'url(../images/minecraft_bg.jpg) top center';
+    document.body.style.background = bgUrl;
+    localStorage.setItem("currentBg", bgUrl);
 }

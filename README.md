@@ -30,4 +30,7 @@
 - Added favicon
 
 -------v1.4-------
-- Added Telegram App v1.0 (Side menu, animations, random message generator in the channel)
+- Added Telegram App v1.0 (Side menu, animations, random message generator in the channel) 
+
+-------v1.5-------
+- Added settings menu where you can change the desktop background

@@ -430,10 +430,9 @@ body {
   font-size: 30px;
   z-index: 1000;
   transform: translate(0, 120%);
-  transition: 0.2s all ease-in-out;
+  transition: 0.3s all ease;
 }
 .desktop__start._active {
-  display: block;
   transform: translate(0, 0%);
 }
 .desktop__start .wrapper {
@@ -528,6 +527,110 @@ body {
 .desktop__start-main .cards__card:hover {
   background-color: #525252;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.desktop__settings {
+  position: absolute;
+  width: 1000px;
+  height: 700px;
+  background-color: #fff;
+  color: #000;
+  top: 120%;
+  left: -35%;
+  scale: 0;
+  transition: 0.4s all ease;
+  opacity: 0;
+}
+.desktop__settings._active {
+  opacity: 1;
+  top: 10%;
+  left: 35%;
+  scale: 1;
+}
+.desktop__settings .header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #fff;
+}
+.desktop__settings .header .icon {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+.desktop__settings .header .icon .hover-close {
+  display: none;
+}
+.desktop__settings .header .icon:hover {
+  background-color: #e5e5e5;
+}
+.desktop__settings .header .icon:nth-child(3):hover {
+  background-color: #e81123;
+}
+.desktop__settings .header .icon:nth-child(3):hover .hover-close {
+  display: flex;
+}
+.desktop__settings .header .icon:nth-child(3):hover .close {
+  display: none;
+}
+.desktop__settings-title {
+  text-align: center;
+  margin-top: 30px;
+}
+.desktop__settings-title p {
+  font-size: 24px;
+  font-weight: 300;
+}
+.desktop__settings-item {
+  margin: 30px;
+}
+.desktop__settings-item .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+.desktop__settings-item .title p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.desktop__settings-item .title img {
+  max-width: 40px;
+}
+.desktop__settings-item .images {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+.desktop__settings-item .images__card {
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(236, 236, 236);
+  box-shadow: -1px 3px 20px -2px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: -1px 3px 20px -2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: -1px 3px 20px -2px rgba(0, 0, 0, 0.35);
+}
+.desktop__settings-item .images__card img {
+  margin: 0 auto;
+  max-width: 200px;
+}
+.desktop__settings-item .images__card p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
+.desktop__settings-item .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 .desktop__calc {
   position: absolute;
@@ -1067,7 +1170,7 @@ body {
 .desktop__icons-icon {
   width: 80px;
   padding: 5px;
-  border: 1px solid rgba(101, 196, 209, 0);
+  border: 1px solid rgba(86, 196, 249, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1085,7 +1188,7 @@ body {
 }
 .desktop__icons-icon:hover {
   background-color: rgba(121, 235, 250, 0.15);
-  border: 1px solid rgba(101, 196, 209, 0.5);
+  border: 1px solid rgba(101, 196, 209, 0.3);
 }
 .desktop__icons-icon .recycle_bin {
   max-width: 60px;
@@ -1114,6 +1217,9 @@ body {
   height: 100%;
   padding: 4px;
 }
+.footer__left-icon:nth-child(1) {
+  padding: 5px;
+}
 .footer__left-icon:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
@@ -1123,7 +1229,7 @@ body {
 .footer__left .user-icons {
   border-bottom: 2px solid rgb(95, 171, 221);
 }
-.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon, .footer__left .snakeFooterIcon, .footer__left .telegramFooterIcon {
+.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon, .footer__left .snakeFooterIcon, .footer__left .telegramFooterIcon, .footer__left .windowsSettingsFooterIcon {
   display: none;
 }
 .footer__right {

@@ -491,6 +491,48 @@
             </div>
         </div>
 
+        <div class="desktop__weather">
+            <header class="header">
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-sharp/24/acacac/horizontal-line.png" alt="horizontal-line">
+                </div>
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-rounded/24/acacac/square-spinner.png" alt="square-spinner"/>
+                </div>
+                <div class="icon closeWeatherBtn">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1" class="hover-close">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/acacac/delete-sign--v1.png" alt="delete-sign--v1" class="close">
+                </div>
+            </header>
+
+            <div class="desktop__weather-main">
+                <div class="input">
+                    <img width="30" height="30" src="https://img.icons8.com/color/48/marker--v1.png" alt="marker--v1">
+                    <input type="text" placeholder="Enter location..." class="inputCityField">
+                    <button type="button" class="getWeather">
+                        <img width="30" height="30" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1">
+                    </button>
+                </div>
+
+                <div class="info weatherInfo">
+                    <img src="images/weatherNone.png" alt="Weather image" class="currentWeather">
+                    <p class="degrees"></p>
+                    <p class="weather-info">Enter city</p>
+
+                    <div class="info__footer">
+                        <div class="humidity">
+                            <img width="30" height="30" src="https://img.icons8.com/matisse/100/dew-point.png" alt="dew-point" class="humidityImg">
+                            <p class="humidityText"></p>
+                        </div>
+                        <div class="wind">
+                            <p class="windText"></p>
+                            <img width="30" height="30" src="https://img.icons8.com/color/48/wind.png" alt="wind" class="windImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="desktop__start">
             <div class="wrapper">
                 <aside>
@@ -568,7 +610,7 @@
                             <img width="60" height="60" src="https://img.icons8.com/fluency/96/microsoft-store.png" alt="microsoft-store"/>
                             <p>Microsoft Store</p>
                         </div>
-                        <div class="cards__card">
+                        <div class="cards__card weatherApp">
                             <img width="60" height="60" src="https://img.icons8.com/fluency/96/weather.png" alt="weather"/>
                             <p>Weather</p>
                         </div>
@@ -702,6 +744,10 @@
             <div class="footer__left-icon windowsSettingsFooterIcon">
                 <img src="https://img.icons8.com/material-rounded/48/ffffff/settings.png" alt="settings" class="user-icons">
             </div>
+            <div class="footer__left-icon weatherFooterIcon">
+                <img src="https://img.icons8.com/fluency/96/weather.png" alt="weather" class="user-icons">
+            </div>
+            
         </div>
 
         <div class="footer__right">

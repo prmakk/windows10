@@ -38,3 +38,6 @@
 -------v1.6-------
 - Added weather App in start menu (data from OpenWeatherApp)
 - Fixed bug with desktop image
+
+-------v1.7-------
+- Added Chrome Dino Game

@@ -107,6 +107,20 @@ const windImg = document.querySelector('.windImg');
 const currentWeatherImg = document.querySelector('.currentWeather');
 const weatherFooterIcon = document.querySelector('.weatherFooterIcon');
 
+
+//DINO GAME VARIABLES
+const desktopDinoBtn = document.querySelector('.desktop-dino');
+const dinoGameWindow = document.querySelector('.desktop__dino');
+const dinoMain = document.getElementById('mainDino');
+const startGameDinoBtn = document.querySelector('.startGameDinoBtn');
+const dinoGameStartMenu = document.getElementById('dinoGameStartMenu');
+const dinoLoseWindow = document.querySelector('.dinoLose');
+const dinoLoseScoreText = document.querySelector('.dinoLoseScoreText');
+const dinoLoseNewGameBtn = document.querySelector('.dinoLoseNewGame');
+const dinoFooterIcon = document.querySelector('.dinoFooterIcon');
+const closeDinoGameBtn = document.querySelector('.closeDinoGame');
+
+
 window.onload = () =>{
     let currentBg = localStorage.getItem("currentBg");
     document.body.style.background = currentBg;
@@ -382,4 +396,32 @@ getWeatherBtn.onclick = () =>{
                 currentWind.innerHTML = Math.round(data.wind.speed) + "km/h";
             }
         });
+}
+
+
+
+//DINO GAME SECTION
+
+desktopDinoBtn.onclick = () =>{
+    dinoGameWindow.classList.add('_active');
+    dinoMain.classList.add('_hidden');
+    dinoFooterIcon.style = 'display: flex';
+}
+
+startGameDinoBtn.onclick = () =>{
+    dinoMain.classList.remove('_hidden');
+    dinoGameStartMenu.classList.add('_hidden');
+}
+
+dinoLoseNewGameBtn.onclick = () =>{
+    dinoMain.classList.remove('_hidden');
+    dinoGameStartMenu.classList.add('_hidden');
+    dinoLoseWindow.classList.remove('_active');
+    currentScore = 0;
+    startInfoMsg.style = 'display: none';
+}
+
+closeDinoGameBtn.onclick = () =>{
+    dinoGameWindow.classList.remove('_active');
+    dinoFooterIcon.style = 'display: none';
 }

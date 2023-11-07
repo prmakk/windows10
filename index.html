@@ -687,6 +687,65 @@
             </div>
         </div>
 
+        <div class="desktop__dino" tabindex="0">
+            <header class="header">
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-sharp/24/acacac/horizontal-line.png" alt="horizontal-line">
+                </div>
+                <div class="icon">
+                    <img width="15" height="15" src="https://img.icons8.com/material-rounded/24/acacac/square-spinner.png" alt="square-spinner"/>
+                </div>
+                <div class="icon closeDinoGame">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1" class="hover-close">
+                    <img width="15" height="15" src="https://img.icons8.com/ios-filled/50/acacac/delete-sign--v1.png" alt="delete-sign--v1" class="close">
+                </div>
+            </header>
+
+            <div class="menu" id="dinoGameStartMenu">
+                <img src="images/dinoRun.gif" alt="Dino Run Logo">
+                <div class="menu__btn">
+                    <p class="startGameDinoBtn">Start Game</p>
+                </div>
+            </div>
+
+            <div class="dinoLose">
+                <img src="images/dinoGameOver.gif" alt="Game Over">
+                <p class="dinoLoseScoreText"></p>
+                <p class="dinoLoseNewGame">New Game</p>
+            </div>
+
+            <div class="main" id="mainDino">
+                <div class="main__header">
+                    <p>Score:</p>
+                    <p class="currentDinoScore">0</p>
+                </div>
+
+                <div class="main__gameboard">
+                    <div class="startInfo">
+                        <p>Press any button when you ready</p>
+                    </div>
+
+                    <div class="clouds">
+                        <div class="cloud1">
+                            <img src="images/cloud.png" alt="Cloud Img">
+                        </div>
+
+                        <div class="cloud2">
+                            <img src="images/cloud.png" alt="Cloud Img">
+                        </div>
+                    </div>
+
+                    <div class="dino">
+                        <img src="images/dinoPlayer.png" alt="Dino Player Img">
+                    </div>
+
+                    <div class="cactus">
+                        <img src="images/cactus.png" alt="Cactus Img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="desktop__icons">
             <div class="desktop__icons-icon desktop-pc">
                 <img src="images/mypc.png" alt="PC windows 10 icon">
@@ -711,6 +770,10 @@
             <div class="desktop__icons-icon desktop-telegram">
                 <img src="images/Telegram_logo.png" alt="Telegram Logo" >
                 <h2>Telegram</h2>
+            </div>
+            <div class="desktop__icons-icon desktop-dino">
+                <img src="images/dinoGameLogo.png" alt="Dino Game Logo" >
+                <h2>Dino Game</h2>
             </div>
         </div>
     </section>
@@ -746,6 +809,9 @@
             </div>
             <div class="footer__left-icon weatherFooterIcon">
                 <img src="https://img.icons8.com/fluency/96/weather.png" alt="weather" class="user-icons">
+            </div>
+            <div class="footer__left-icon dinoFooterIcon">
+                <img src="images/dinoGameLogo.png" alt="Dino Logo" class="user-icons">
             </div>
             
         </div>
@@ -799,5 +865,6 @@
     <script src="js/snake.js"></script>
     <script src="js/randomMsgs.js"></script>
     <script type="module" src="js/telegram.js"></script>
+    <script src="js/dinoGame.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1266,6 +1267,240 @@ body {
   left: 35%;
   scale: 1;
 }
+.desktop__dino {
+  position: absolute;
+  background-color: #fff;
+  top: 20%;
+  left: 30%;
+  color: #000;
+  scale: 0;
+  transition: 0.3s all ease;
+  opacity: 0;
+  font-family: "Press Start 2P", cursive;
+}
+.desktop__dino._active {
+  opacity: 1;
+  top: 10%;
+  left: 35%;
+  scale: 1;
+}
+.desktop__dino .header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #f1f1f1;
+}
+.desktop__dino .header .icon {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+.desktop__dino .header .icon .hover-close {
+  display: none;
+}
+.desktop__dino .header .icon:hover {
+  background-color: #e5e5e5;
+}
+.desktop__dino .header .icon:nth-child(3):hover {
+  background-color: #e81123;
+}
+.desktop__dino .header .icon:nth-child(3):hover .hover-close {
+  display: flex;
+}
+.desktop__dino .header .icon:nth-child(3):hover .close {
+  display: none;
+}
+.desktop__dino .menu {
+  width: 700px;
+  height: 344px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.desktop__dino .menu._hidden {
+  display: none;
+}
+.desktop__dino .menu img {
+  max-width: 100px;
+}
+.desktop__dino .menu__btn {
+  font-size: 28px;
+  margin-top: 50px;
+}
+.desktop__dino .menu__btn p {
+  animation: scale 1.5s infinite;
+}
+.desktop__dino .menu__btn p:hover {
+  cursor: pointer;
+}
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.desktop__dino .dinoLose {
+  width: 700px;
+  height: 344px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.desktop__dino .dinoLose._active {
+  display: flex;
+}
+.desktop__dino .dinoLose p {
+  font-size: 20px;
+}
+.desktop__dino .dinoLose .dinoLoseNewGame {
+  margin-top: 20px;
+  animation: scaleLose 1.5s infinite;
+  color: green;
+}
+@keyframes scaleLose {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.4;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.desktop__dino .dinoLose .dinoLoseNewGame:hover {
+  cursor: pointer;
+}
+.desktop__dino .main {
+  padding: 10px;
+}
+.desktop__dino .main__header {
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.7;
+}
+.desktop__dino .main__gameboard {
+  width: 700px;
+  border: 2px solid #999;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+.desktop__dino .main__gameboard .startInfo {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.desktop__dino .main__gameboard .startInfo p {
+  animation: scale 1.5s infinite;
+}
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.desktop__dino .main__gameboard .startInfo._hidden {
+  display: none;
+}
+.desktop__dino .main__gameboard .dino {
+  margin-left: 10px;
+  position: absolute;
+  margin-right: -10px;
+}
+.desktop__dino .main__gameboard .dino img {
+  max-width: 50px;
+}
+.desktop__dino .main__gameboard .dino.jump {
+  animation: jump 0.5s linear;
+}
+@keyframes jump {
+  0% {
+    margin-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 100px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
+.desktop__dino .main__gameboard .cactus {
+  position: absolute;
+  right: 0;
+}
+.desktop__dino .main__gameboard .cactus img {
+  max-width: 25px;
+  animation: go 2s infinite linear;
+}
+@keyframes go {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 680px;
+  }
+}
+.desktop__dino .main__gameboard .clouds .cloud1 {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  animation: go1 6s infinite linear;
+}
+.desktop__dino .main__gameboard .clouds .cloud1 img {
+  max-width: 80px;
+}
+@keyframes go1 {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 620px;
+  }
+}
+.desktop__dino .main__gameboard .clouds .cloud2 {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  animation: go2 7s infinite linear;
+}
+.desktop__dino .main__gameboard .clouds .cloud2 img {
+  max-width: 60px;
+}
+@keyframes go2 {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 640px;
+  }
+}
+.desktop__dino .main._hidden {
+  display: none;
+}
 .desktop__icons {
   padding: 10px;
   display: flex;
@@ -1333,7 +1568,8 @@ body {
 .footer__left .user-icons {
   border-bottom: 2px solid rgb(95, 171, 221);
 }
-.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon, .footer__left .snakeFooterIcon, .footer__left .telegramFooterIcon, .footer__left .windowsSettingsFooterIcon, .footer__left .weatherFooterIcon {
+.footer__left .chromeFooterIcon, .footer__left .calcFooterIcon, .footer__left .snakeFooterIcon, .footer__left .telegramFooterIcon, .footer__left .windowsSettingsFooterIcon, .footer__left .weatherFooterIcon,
+.footer__left .dinoFooterIcon {
   display: none;
 }
 .footer__right {
